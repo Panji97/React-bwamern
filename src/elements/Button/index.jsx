@@ -46,10 +46,11 @@ export default function Button(props) {
     }
   }
 
-  return;
-  <button to={props.href} className={className.join(' ')} style={props.style} onClick={onClick}>
-    {props.children}
-  </button>;
+  return (
+    <button to={props.href} className={className.join(' ')} style={props.style} onClick={onClick}>
+      {props.children}
+    </button>
+  );
 }
 
 Button.propTypes = {
@@ -65,4 +66,5 @@ Button.propTypes = {
   isBlock: propTypes.bool,
   isExternal: propTypes.bool,
   hasShadow: propTypes.bool,
+  isPrimary: propTypes.bool,
 };
